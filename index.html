@@ -44,6 +44,7 @@
             background-color: #4f46e5;
             color: white;
             width: 100%;
+            display: block; /* Asegura que ocupe todo el ancho */
         }
         .checkbox-label:hover {
             background-color: #6366f1;
@@ -101,61 +102,81 @@
             {
                 id: 1,
                 title: "Primer Chispazo",
-                description: "El viaje comienza con una conversación. Le susurras una idea a la IA y, como por arte de magia, aparece una aplicación. Es tu primer chispazo, la prueba de que puedes crear. La compartes con orgullo en el mismo chat donde nació.",
+                narrative: "El viaje comienza con una conversación. Le susurras una idea a la IA y, como por arte de magia, aparece una aplicación. Es tu primer chispazo, la prueba de que puedes crear. La compartes con orgullo en el mismo chat donde nació.",
+                tools: "Gemini, Claude, ChatGPT.",
+                hint: "Pide a la IA: 'Crea una página con un título y un botón que diga Empezar'.",
                 badge: `<svg class="badge w-24 h-24" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="2"/><path d="M50 20 L60 40 L80 45 L65 60 L70 80 L50 70 L30 80 L35 60 L20 45 L40 40 Z" fill="#ffd700"/></svg>`
             },
             {
                 id: 2,
                 title: "El Salto Afuera",
-                description: "Tu creación aprende a volar. La tomas con cuidado del nido del chatbot y la liberas en el vasto mundo de la web, ya sea en un simple Google Site o en un REA. O quizás, decides quedarte un poco más, enseñándole a tu app a usar la inteligencia del propio chat para sorprender con respuestas dinámicas.",
+                narrative: "Tu creación aprende a volar. La tomas con cuidado del nido del chatbot y la liberas en el vasto mundo de la web, ya sea en un simple Google Site o en un REA. O quizás, decides quedarte un poco más, enseñándole a tu app a usar la inteligencia del propio chat para sorprender con respuestas dinámicas.",
+                tools: "Google Sites, Moodle, GitHub.",
+                hint: "Dile a la IA: 'Dame todo el código HTML, CSS y JS para esta aplicación en un solo bloque para copiar y pegar'.",
                 badge: `<svg class="badge w-24 h-24" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="2"/><path d="M50 15 L20 85 L80 85 Z" fill="#6a3805"/><path d="M50 15 L25 80 L75 80 Z" fill="#8b4513"/></svg>`
             },
             {
                 id: 3,
                 title: "Gestor de Datos",
-                description: "Tu app desarrolla una memoria. Le enseñas a recordar cosas, ya sea leyendo desde una hoja de cálculo que actúa como su cerebro externo, o usando el `localStorage` del navegador como su diario personal para no olvidar la puntuación más alta.",
+                narrative: "Tu app desarrolla una memoria. Le enseñas a recordar cosas, ya sea leyendo desde una hoja de cálculo que actúa como su cerebro externo, o usando el `localStorage` del navegador como su diario personal para no olvidar la puntuación más alta.",
+                tools: "Google Sheets, JSON, `localStorage`.",
+                hint: "Pide a la IA: 'Modifica este código para que lea las preguntas desde este archivo JSON en lugar de tenerlas en el script'.",
                 badge: `<svg class="badge w-24 h-24" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="2"/><rect x="30" y="30" width="40" height="40" fill="#4682b4" stroke="#000" stroke-width="2"/><rect x="35" y="35" width="10" height="10" fill="#fff"/><rect x="55" y="35" width="10" height="10" fill="#fff"/><rect x="35" y="55" width="10" height="10" fill="#fff"/><rect x="55" y="55" width="10" height="10" fill="#fff"/></svg>`
             },
             {
                 id: 4,
                 title: "Arquitecto de Código",
-                description: "Como un arquitecto que dibuja planos, le pides a la IA que ponga orden. El código, antes un bloque monolítico, se transforma en una estructura elegante de archivos HTML, CSS y JS, listos para vivir en su nuevo hogar: un repositorio de GitHub.",
+                narrative: "Como un arquitecto que dibuja planos, le pides a la IA que ponga orden. El código, antes un bloque monolítico, se transforma en una estructura elegante de archivos HTML, CSS y JS, listos para vivir en su nuevo hogar: un repositorio de GitHub.",
+                tools: "GitHub, HTML/CSS/JS.",
+                hint: "Pide a la IA: 'Toma este código y sepáralo en tres archivos: index.html, style.css y script.js'.",
                 badge: `<svg class="badge w-24 h-24" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="2"/><path d="M20 80 L50 20 L80 80 Z" stroke="#36454f" stroke-width="5" fill="none"/><circle cx="50" cy="50" r="10" fill="#36454f"/></svg>`
             },
             {
                 id: 5,
                 title: "Desarrollador Local",
-                description: "Ahora trabajas en tu propio taller. Has montado tu entorno de desarrollo local y le pides a la IA que te ayude a refinar tu obra, como un maestro artesano que pule cada pieza, creando funciones modulares y probando todo en la comodidad de tu máquina.",
+                narrative: "Ahora trabajas en tu propio taller. Has montado tu entorno de desarrollo local y le pides a la IA que te ayude a refinar tu obra, como un maestro artesano que pule cada pieza, creando funciones modulares y probando todo en la comodidad de tu máquina.",
+                tools: "VS Code, Live Server.",
+                hint: "Pega tu script en el chat y di: 'Analiza este código y dime cómo puedo convertirlo en funciones más pequeñas y reutilizables'.",
                 badge: `<svg class="badge w-24 h-24" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="2"/><path d="M30 70 L50 30 L70 70 Z" fill="#ff4500"/><path d="M40 70 L50 50 L60 70 Z" fill="#ff6347"/></svg>`
             },
             {
                 id: 6,
                 title: "Maestro de Git",
-                description: "Te conviertes en el guardián de tu creación. Con la IA como tu escriba, aprendes el antiguo arte de Git. Cada `commit` es un sello en la historia de tu proyecto, cada `push` un envío de tu trabajo al gran archivo de GitHub.",
+                narrative: "Te conviertes en el guardián de tu creación. Con la IA como tu escriba, aprendes el antiguo arte de Git. Cada `commit` es un sello en la historia de tu proyecto, cada `push` un envío de tu trabajo al gran archivo de GitHub.",
+                tools: "Git, Terminal.",
+                hint: "Pregunta a la IA: 'Tengo una carpeta con mi proyecto, ¿cuáles son los 5 comandos de Git que necesito para subirla a mi nuevo repositorio de GitHub por primera vez?'.",
                 badge: `<svg class="badge w-24 h-24" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="2"/><path d="M50 25 a 25 25 0 0 1 0 50 a 25 25 0 0 1 0 -50" fill="#008080"/><circle cx="50" cy="50" r="10" fill="#fff"/></svg>`
             },
             {
                 id: 7,
                 title: "Modernizador React",
-                description: "Decides que tu creación merece un motor más potente. Le pides a la IA que te guíe en la reconstrucción de tu app con la fuerza de React, transformando su estructura en un sistema de componentes modernos y eficientes, todo desde tu taller local.",
+                narrative: "Decides que tu creación merece un motor más potente. Le pides a la IA que te guíe en la reconstrucción de tu app con la fuerza de React, transformando su estructura en un sistema de componentes modernos y eficientes, todo desde tu taller local.",
+                tools: "React, Vite, Node.js, npm.",
+                hint: "Dale a la IA el código de tu app y di: 'Quiero convertir esta aplicación a React. Ayúdame a pensar en qué componentes la puedo dividir y genera el código para el componente principal App.jsx'.",
                 badge: `<svg class="badge w-24 h-24" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="2"/><circle cx="50" cy="50" r="30" stroke="#61dafb" stroke-width="8" fill="none"/><ellipse cx="50" cy="50" rx="30" ry="12" stroke="#61dafb" stroke-width="8" fill="none" transform="rotate(60 50 50)"/><ellipse cx="50" cy="50" rx="30" ry="12" stroke="#61dafb" stroke-width="8" fill="none" transform="rotate(-60 50 50)"/><circle cx="50" cy="50" r="5" fill="#61dafb"/></svg>`
             },
             {
                 id: 8,
                 title: "Despliegue Pro",
-                description: "Tu obra maestra moderna está lista para el gran escenario. Con la ayuda de la IA como tu ingeniero de despliegue, empaquetas tu aplicación de React y la lanzas al mundo a través de GitHub Pages, para que todos la vean.",
+                narrative: "Tu obra maestra moderna está lista para el gran escenario. Con la ayuda de la IA como tu ingeniero de despliegue, empaquetas tu aplicación de React y la lanzas al mundo a través de GitHub Pages, para que todos la vean.",
+                tools: "`gh-pages` (npm package), Git.",
+                hint: "Pregunta a la IA: 'Tengo una app de React con Vite. ¿Qué necesito añadir a mis archivos package.json y vite.config.js para desplegarla en GitHub Pages?'.",
                 badge: `<svg class="badge w-24 h-24" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="2"/><path d="M50 10 L90 50 L50 90 L10 50 Z" fill="#4b0082"/><circle cx="50" cy="50" r="15" fill="#fff"/></svg>`
             },
             {
                 id: 9,
                 title: "Conector de Mundos",
-                description: "Tu aplicación abre sus puertas y ventanas al mundo. Le enseñas a hablar con otros servicios a través de APIs, trayendo datos del exterior, o a susurrar directamente a otras apps mediante la magia del P2P con WebRTC.",
+                narrative: "Tu aplicación abre sus puertas y ventanas al mundo. Le enseñas a hablar con otros servicios a través de APIs, trayendo datos del exterior, o a susurrar directamente a otras apps mediante la magia del P2P con WebRTC.",
+                tools: "Google Apps Script, `fetch()` API, PeerJS.",
+                hint: "Pide a la IA: 'Escribe una función de Google Apps Script que actúe como un proxy seguro para llamar a una API externa. Luego, dame el código JS para llamar a ese script desde mi app'.",
                 badge: `<svg class="badge w-24 h-24" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="2"/><path d="M30 50 H70 M50 30 V70" stroke="#ff8c00" stroke-width="8"/><circle cx="30" cy="50" r="8" fill="#ff8c00"/><circle cx="70" cy="50" r="8" fill="#ff8c00"/><circle cx="50" cy="30" r="8" fill="#ff8c00"/><circle cx="50" cy="70" r="8" fill="#ff8c00"/></svg>`
             },
             {
                 id: 10,
                 title: "Explorador Incansable",
-                description: "Ya no solo sigues el mapa, ahora lo dibujas. Tu curiosidad es tu brújula. Usas a la IA como compañera de expedición para descubrir nuevas tierras tecnológicas, crear prototipos audaces y compartir tus descubrimientos con la tribu.",
+                narrative: "Ya no solo sigues el mapa, ahora lo dibujas. Tu curiosidad es tu brújula. Usas a la IA como compañera de expedición para descubrir nuevas tierras tecnológicas, crear prototipos audaces y compartir tus descubrimientos con la tribu.",
+                tools: "Curiosidad, Documentación, Foros.",
+                hint: "Pregunta a la IA: 'Estoy interesado en la visualización de datos. ¿Qué librerías de JS son populares? Genérame un ejemplo de código básico con D3.js y un conjunto de datos simple'.",
                 badge: `<svg class="badge w-24 h-24" viewBox="0 0 100 100"><circle cx="50" cy="50" r="45" fill="#c0c0c0" stroke="#a0a0a0" stroke-width="2"/><path d="M50 10 C 80 20, 80 80, 50 90 C 20 80, 20 20, 50 10" fill="url(#grad1)"/><defs><radialGradient id="grad1" cx="50%" cy="50%" r="50%" fx="50%" fy="50%"><stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" /><stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" /></radialGradient></defs></svg>`
             }
         ];
@@ -177,16 +198,20 @@
             achievements.forEach(ach => {
                 const isCompleted = completedAchievements.includes(ach.id);
                 const card = document.createElement('div');
-                card.className = `achievement-card rounded-lg p-6 flex flex-col text-center ${isCompleted ? 'completed' : ''}`;
+                card.className = `achievement-card rounded-lg p-6 text-center ${isCompleted ? 'completed' : ''}`;
                 card.id = `ach-${ach.id}`;
 
                 card.innerHTML = `
-                    ${ach.badge}
+                    <div class="mx-auto">${ach.badge}</div>
                     <div class="card-content mt-4">
                         <h3 class="text-xl font-bold text-white">${ach.title}</h3>
-                        <p class="text-gray-400 text-sm mt-2 mb-4">${ach.description}</p>
+                        <p class="text-gray-400 text-sm mt-2 mb-4">${ach.narrative}</p>
+                        <div class="text-left mt-2 p-3 bg-gray-900/50 rounded-md">
+                            <p class="text-sm font-semibold text-indigo-300">Herramientas: <span class="font-normal text-gray-400">${ach.tools}</span></p>
+                            <p class="text-sm font-semibold text-purple-300 mt-2">Pista: <span class="font-normal text-gray-400">${ach.hint}</span></p>
+                        </div>
                     </div>
-                    <div class="mt-auto pt-4">
+                    <div class="mt-auto pt-6">
                         <input type="checkbox" id="check-${ach.id}" ${isCompleted ? 'checked' : ''}>
                         <label for="check-${ach.id}" class="checkbox-label font-semibold text-sm">${isCompleted ? '¡Conseguido!' : 'Completar Logro'}</label>
                     </div>
